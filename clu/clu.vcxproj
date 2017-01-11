@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F40598DD-9FCF-43A5-9820-769D9117E558}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>clu</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)CommandLineHandlers;$(ProjectDir)Utils;$(ProjectDir)InputSource;$(ProjectDir)OutputHandlers;X:\3rdParty\Boost\1.61.0</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>X:\3rdParty\Boost\1.61.0\lib\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)CommandLineHandlers;$(ProjectDir)Utils;$(ProjectDir)InputSource;$(ProjectDir)OutputHandlers;X:\3rdParty\Boost\1.61.0</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>X:\3rdParty\Boost\1.61.0\lib\x64</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReleaseNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommandLineHandlers\CommandLineHandler.cpp" />
+    <ClCompile Include="CommandLineUtility.cpp" />
+    <ClCompile Include="InputSource\MultipleInputSource.cpp" />
+    <ClCompile Include="Operators\DisplayOperator.cpp" />
+    <ClCompile Include="Operators\TeeOperator.cpp" />
+    <ClCompile Include="Operators\VersionOperator.cpp" />
+    <ClCompile Include="InputSource\PrePostInputReader.cpp" />
+    <ClCompile Include="InputSource\StandardInputSource.cpp" />
+    <ClCompile Include="Utils\ConcurrentQueue.cpp" />
+    <ClCompile Include="Utils\Initialization.cpp" />
+    <ClCompile Include="InputSource\FileInputReader.cpp" />
+    <ClCompile Include="InputSource\InputSource.cpp" />
+    <ClCompile Include="Operators\AccumulatedCountOperator.cpp" />
+    <ClCompile Include="Operators\AggregateOperator.cpp" />
+    <ClCompile Include="Operators\ArgOperator.cpp" />
+    <ClCompile Include="Operators\AvgOperator.cpp" />
+    <ClCompile Include="Operators\BindedPrefixRegexOperator.cpp" />
+    <ClCompile Include="Operators\BucketOperator.cpp" />
+    <ClCompile Include="Operators\ConcurrentSystemOperator.cpp" />
+    <ClCompile Include="Operators\ConsolidateOperator.cpp" />
+    <ClCompile Include="Operators\CounterOperator.cpp" />
+    <ClCompile Include="Operators\ErrorCodeOperator.cpp" />
+    <ClCompile Include="Operators\EveryOperator.cpp" />
+    <ClCompile Include="Operators\ExtendedFormatOperator.cpp" />
+    <ClCompile Include="Operators\FileMergeOperator.cpp" />
+    <ClCompile Include="Operators\FileOutputHandler.cpp" />
+    <ClCompile Include="Operators\FilterOperator.cpp" />
+    <ClCompile Include="Operators\FormatOperator.cpp" />
+    <ClCompile Include="Operators\FullFileOperator.cpp" />
+    <ClCompile Include="Operators\HeadOperator.cpp" />
+    <ClCompile Include="Operators\HelpOperator.cpp" />
+    <ClCompile Include="Operators\HistogramOperator.cpp" />
+    <ClCompile Include="Operators\KeyMergerOperator.cpp" />
+    <ClCompile Include="Operators\LengthOperator.cpp" />
+    <ClCompile Include="Operators\LinearOperator.cpp" />
+    <ClCompile Include="Operators\LineConcatOperator.cpp" />
+    <ClCompile Include="Operators\MaxOperator.cpp" />
+    <ClCompile Include="Operators\MinOperator.cpp" />
+    <ClCompile Include="Operators\ModuleOperator.cpp" />
+    <ClCompile Include="Operators\NamedRegexOperator.cpp" />
+    <ClCompile Include="Operators\NumberOperator.cpp" />
+    <ClCompile Include="Operators\PercentileOperator.cpp" />
+    <ClCompile Include="Operators\PrefixRegexOperator.cpp" />
+    <ClCompile Include="Operators\RegexHistogramOperator.cpp" />
+    <ClCompile Include="Operators\RegexOperator.cpp" />
+    <ClCompile Include="Operators\RemoveOperator.cpp" />
+    <ClCompile Include="Operators\ReplaceQuotes.cpp" />
+    <ClCompile Include="Operators\ReverseOperator.cpp" />
+    <ClCompile Include="Operators\ReverseSortOperator.cpp" />
+    <ClCompile Include="Operators\RoundOperator.cpp" />
+    <ClCompile Include="Operators\SearchReplaceOperator.cpp" />
+    <ClCompile Include="Operators\SectionOperator.cpp" />
+    <ClCompile Include="Operators\ShuffleOperator.cpp" />
+    <ClCompile Include="Operators\SkipOperator.cpp" />
+    <ClCompile Include="Operators\SmoothOperator.cpp" />
+    <ClCompile Include="Operators\SortOperator.cpp" />
+    <ClCompile Include="Operators\SplitFilesOperator.cpp" />
+    <ClCompile Include="Operators\StartStopOperator.cpp" />
+    <ClCompile Include="Operators\SumOperator.cpp" />
+    <ClCompile Include="Operators\SystemOperator.cpp" />
+    <ClCompile Include="Operators\TailOperator.cpp" />
+    <ClCompile Include="Operators\ToLowerOperator.cpp" />
+    <ClCompile Include="Operators\ToUpperOperator.cpp" />
+    <ClCompile Include="Operators\TrimOperator.cpp" />
+    <ClCompile Include="Operators\UniqOperator.cpp" />
+    <ClCompile Include="Operators\UUIDOperator.cpp" />
+    <ClCompile Include="Operators\VarOperator.cpp" />
+    <ClCompile Include="Operators\StdOperator.cpp" />
+    <ClCompile Include="OutputHandlers\BufferedOutputHandler.cpp" />
+    <ClCompile Include="OutputHandlers\OutputHandler.cpp" />
+    <ClCompile Include="OutputHandlers\StandardOutputHandler.cpp" />
+    <ClCompile Include="Utils\ProcessingQueue.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommandLineHandlers\CommandLineHandler.h" />
+    <ClInclude Include="CommandLineHandlers\PredicateCommandLineHandler.h" />
+    <ClInclude Include="CommandLineHandlers\SingleCommandLineHandler.h" />
+    <ClInclude Include="CommandLineHandlers\TwoStringCommandLineHandler.h" />
+    <ClInclude Include="InputSource\FileInputReader.h" />
+    <ClInclude Include="Utils\Globals.h" />
+    <ClInclude Include="Utils\Initialization.h" />
+    <ClInclude Include="InputSource\InputFileOperator.h" />
+    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h" />
+    <ClInclude Include="InputSource\InputSource.h" />
+    <ClInclude Include="InputSource\MultipleInputSource.h" />
+    <ClInclude Include="Operators\AggregateOperator.h" />
+    <ClInclude Include="Operators\FullFileOperator.h" />
+    <ClInclude Include="Operators\NumberOperator.h" />
+    <ClInclude Include="Operators\TeeOperator.h" />
+    <ClInclude Include="Operators\VarOperator.h" />
+    <ClInclude Include="OutputHandlers\OutputHandler.h" />
+    <ClInclude Include="OutputHandlers\BufferedOutputHandler.h" />
+    <ClInclude Include="OutputHandlers\FileOutputHandler.h" />
+    <ClInclude Include="InputSource\PrePostInputSource.h" />
+    <ClInclude Include="InputSource\StandardInputSource.h" />
+    <ClInclude Include="Utils\ProcessingQueue.h" />
+    <ClInclude Include="OutputHandlers\StandardOutputHandler.h" />
+    <ClInclude Include="Utils\Task.h" />
+    <ClInclude Include="Utils\Utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
