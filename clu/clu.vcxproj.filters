@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Operators">
+      <UniqueIdentifier>{6f83ddba-78c6-4261-8ecf-93829c66706e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Operators">
+      <UniqueIdentifier>{d7606cbc-78b8-4752-a31b-42eabf0d3a0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CommandLineHandlers">
+      <UniqueIdentifier>{20c4e3e6-ca11-4572-a5a2-1fd84c69f0a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\NumericOperators">
+      <UniqueIdentifier>{47d9e1bd-dbfe-4394-9a2b-b6513c20f1a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\SelectionOperators">
+      <UniqueIdentifier>{db5f4e29-7920-43f4-8dc9-cca5a4c80d54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\FullFileOperators">
+      <UniqueIdentifier>{a5952832-beb9-439f-9a89-bdb7ca7d2cc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\SystemOperators">
+      <UniqueIdentifier>{65588949-2018-4585-b5b1-36ade190f3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\Platform">
+      <UniqueIdentifier>{b6b77573-2a45-480b-b77b-3e293dafec13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{63548eb0-4097-46c8-b369-31e34ba9ce41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OutputHandlers">
+      <UniqueIdentifier>{b89a728d-8e4d-459f-9f31-a3ae2a6c522a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{d37506bb-457e-4d9d-87c8-2169c8c51001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputSources">
+      <UniqueIdentifier>{d6edc927-e82b-486a-9779-e5e6ffe2c966}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\OutputHandlers">
+      <UniqueIdentifier>{f4a6389e-0459-447e-bf62-b478aa4edb2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Platform">
+      <UniqueIdentifier>{e91406a4-a4b2-4ecf-ac58-8cac62346e10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InputSource">
+      <UniqueIdentifier>{42f6ca40-7a18-4fdf-8c8f-50a161527487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InputFileOperator_CommandLine">
+      <UniqueIdentifier>{3800933f-0ddd-4723-af8d-f4733bebb8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\StringOperators">
+      <UniqueIdentifier>{da18eb85-4b51-4af0-a684-aeee9694b329}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReleaseNotes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CommandLineUtility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandLineHandlers\CommandLineHandler.cpp">
+      <Filter>Source Files\CommandLineHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\AvgOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\MaxOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\MinOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\LinearOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SumOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\StdOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\VarOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ArgOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\CounterOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\FormatOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\LengthOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\LineConcatOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\RegexOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ToLowerOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ToUpperOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\TrimOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\TailOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SkipOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\HeadOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\FilterOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\EveryOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ModuleOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\PercentileOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ShuffleOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SortOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\HistogramOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ReverseOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\StartStopOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\RemoveOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ReplaceQuotes.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ReverseSortOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\UUIDOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\UniqOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SectionOperator.cpp">
+      <Filter>Source Files\Operators\SelectionOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SmoothOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\RoundOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\BucketOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SystemOperator.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ConcurrentSystemOperator.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ErrorCodeOperator.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\FullFileOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\AggregateOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\NumberOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ExtendedFormatOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\FileMergeOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ConsolidateOperator.cpp">
+      <Filter>Source Files\Operators\NumericOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\HelpOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SearchReplaceOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\RegexHistogramOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\NamedRegexOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\PrefixRegexOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\KeyMergerOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\BindedPrefixRegexOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\AccumulatedCountOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\SplitFilesOperator.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\FileOutputHandler.cpp">
+      <Filter>Source Files\OutputHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\InputSource.cpp">
+      <Filter>Source Files\InputSource</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\FileInputReader.cpp">
+      <Filter>Source Files\InputSource</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputHandlers\OutputHandler.cpp">
+      <Filter>Source Files\OutputHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputHandlers\BufferedOutputHandler.cpp">
+      <Filter>Source Files\OutputHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputHandlers\StandardOutputHandler.cpp">
+      <Filter>Source Files\OutputHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\ConcurrentQueue.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\ProcessingQueue.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\DisplayOperator.cpp">
+      <Filter>Source Files\Operators\StringOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\VersionOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\TeeOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\MultipleInputSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\PrePostInputReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\StandardInputSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Initialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Operators\NumberOperator.h">
+      <Filter>Header Files\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\AggregateOperator.h">
+      <Filter>Header Files\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\VarOperator.h">
+      <Filter>Header Files\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlers\PredicateCommandLineHandler.h">
+      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlers\SingleCommandLineHandler.h">
+      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlers\TwoStringCommandLineHandler.h">
+      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\FullFileOperator.h">
+      <Filter>Header Files\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputHandlers\FileOutputHandler.h">
+      <Filter>Header Files\OutputHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputHandlers\BufferedOutputHandler.h">
+      <Filter>Header Files\OutputHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\ProcessingQueue.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Task.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlers\CommandLineHandler.h">
+      <Filter>Header Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\TeeOperator.h">
+      <Filter>Header Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\FileInputReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Initialization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\InputFileOperator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\InputSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\MultipleInputSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputHandlers\OutputHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\PrePostInputSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\StandardInputSource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputHandlers\StandardOutputHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
