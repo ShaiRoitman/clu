@@ -1,3 +1,7 @@
-﻿Version 5.0          01/01/2017
+﻿Version 5.1          12/01/2017
+------------------------------------------------------------------------------
+Adding measureTime -> single string -> arguments start,end,diff,pass
+
+Version 5.0          01/01/2017
 ------------------------------------------------------------------------------
 Rewrite/Reorder for publishing the code

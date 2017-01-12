@@ -151,6 +151,7 @@
     <ClCompile Include="CommandLineUtility.cpp" />
     <ClCompile Include="InputSource\MultipleInputSource.cpp" />
     <ClCompile Include="Operators\DisplayOperator.cpp" />
+    <ClCompile Include="Operators\MeasureTimeOperator.cpp" />
     <ClCompile Include="Operators\TeeOperator.cpp" />
     <ClCompile Include="Operators\VersionOperator.cpp" />
     <ClCompile Include="InputSource\PrePostInputReader.cpp" />

@@ -288,6 +288,9 @@
     <ClCompile Include="Utils\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Operators\MeasureTimeOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Operators\NumberOperator.h">
