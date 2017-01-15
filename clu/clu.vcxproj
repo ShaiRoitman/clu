@@ -153,6 +153,8 @@
     <ClCompile Include="Operators\DisplayOperator.cpp" />
     <ClCompile Include="Operators\MeasureTimeOperator.cpp" />
     <ClCompile Include="Operators\TeeOperator.cpp" />
+    <ClCompile Include="Operators\timeEndToStart.cpp" />
+    <ClCompile Include="Operators\timeStartToStart.cpp" />
     <ClCompile Include="Operators\VersionOperator.cpp" />
     <ClCompile Include="InputSource\PrePostInputReader.cpp" />
     <ClCompile Include="InputSource\StandardInputSource.cpp" />

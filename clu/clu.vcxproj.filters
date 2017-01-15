@@ -273,23 +273,29 @@
     <ClCompile Include="Operators\TeeOperator.cpp">
       <Filter>Source Files\Operators\Platform</Filter>
     </ClCompile>
-    <ClCompile Include="InputSource\MultipleInputSource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputSource\PrePostInputReader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputSource\StandardInputSource.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils\Initialization.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils\Utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Operators\MeasureTimeOperator.cpp">
       <Filter>Source Files\Operators\Platform</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\timeEndToStart.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\timeStartToStart.cpp">
+      <Filter>Source Files\Operators\SystemOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\StandardInputSource.cpp">
+      <Filter>Source Files\InputSource</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\PrePostInputReader.cpp">
+      <Filter>Source Files\InputSource</Filter>
+    </ClCompile>
+    <ClCompile Include="InputSource\MultipleInputSource.cpp">
+      <Filter>Source Files\InputSource</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Initialization.cpp">
+      <Filter>Source Files\Utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
