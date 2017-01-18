@@ -338,41 +338,41 @@
     <ClInclude Include="Operators\TeeOperator.h">
       <Filter>Header Files\Platform</Filter>
     </ClInclude>
-    <ClInclude Include="InputSource\FileInputReader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Utils\Globals.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
     </ClInclude>
     <ClInclude Include="Utils\Initialization.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\FileInputReader.h">
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="InputSource\InputFileOperator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="InputSource\InputSource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputSource\MultipleInputSource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="OutputHandlers\OutputHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OutputHandlers</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSource\MultipleInputSource.h">
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="InputSource\PrePostInputSource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="InputSource\StandardInputSource.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\InputSources</Filter>
     </ClInclude>
     <ClInclude Include="OutputHandlers\StandardOutputHandler.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\OutputHandlers</Filter>
     </ClInclude>
     <ClInclude Include="Utils\Utils.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h">
+      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
