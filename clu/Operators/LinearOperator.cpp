@@ -38,7 +38,7 @@ class Linear_CommandLine : public InputFileOperator_CommandLine
 		return true;
 	}
 
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* ret_value = NULL;
 		if (vm.count("add") || vm.count("mul") || vm.count("div")) {

@@ -64,7 +64,7 @@ class ExtendedFormatCommandLineHandler : public InputFileOperator_CommandLine
 		return true;
 	}
 
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* retValue = NULL;
 		string eformatdelimit = ",";

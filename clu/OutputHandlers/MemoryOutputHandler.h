@@ -1,12 +1,11 @@
 #pragma once
 
 #include "OutputHandler.h"
-#include "MemoryOutputHandler.h"
 
-class BufferedOutputHandler : public OutputHandler
+class MemoryOutputHandler : public OutputHandler
 {
 public:
-	BufferedOutputHandler(const std::string& filename);
+	MemoryOutputHandler();
 	virtual bool Output(const std::string& str);
 	virtual bool OutputInteger(int value);
 	virtual bool OutputDoubleNoLineFeed(double value);
@@ -14,7 +13,6 @@ public:
 	virtual bool OnStartHandling();
 	virtual bool OnEndHandling();
 
-private:
-	MemoryOutputHandler handler;
-	std::string m_Filename;
+public:
+	std::list<std::string> m_Lines;
 };

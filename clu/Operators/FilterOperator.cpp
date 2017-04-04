@@ -135,7 +135,7 @@ public:
 		return true;
 	}
 
-	virtual InputFileOperator* GetOperator(po::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const po::variables_map &vm)
 	{
 		InputFileOperator* listener = NULL;
 		if (vm.count("filter")) {

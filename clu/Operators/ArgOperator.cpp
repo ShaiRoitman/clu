@@ -84,7 +84,7 @@ class Arg_CommandLine : public InputFileOperator_CommandLine
 		return true;
 	}
 
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* listener = NULL;
 		if (vm.count("arg")) {

@@ -48,7 +48,7 @@ class NamedRegex_CommandLine : public InputFileOperator_CommandLine
 			("namedformat", boost::program_options::value<string>(), "Named Regex Operator - Format expression including names of groups from the regex in %%groupname format");
 		return true;
 	}
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* ret_value = NULL;
 		if (vm.count("namedregex") && vm.count("namedformat"))

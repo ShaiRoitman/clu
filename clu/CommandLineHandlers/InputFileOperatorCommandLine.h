@@ -11,7 +11,7 @@ class InputFileOperator_CommandLine
 {
 public:
 	virtual bool AddProgramOptions(boost::program_options::options_description& desc) = 0;
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm) = 0;
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm) = 0;
 };
 
 END_NAMESPACE(clu)

@@ -152,12 +152,16 @@
     <ClCompile Include="InputSource\MultipleInputSource.cpp" />
     <ClCompile Include="Operators\DisplayOperator.cpp" />
     <ClCompile Include="Operators\MeasureTimeOperator.cpp" />
+    <ClCompile Include="Operators\ParallelOperator.cpp" />
     <ClCompile Include="Operators\TeeOperator.cpp" />
+    <ClCompile Include="Operators\TestOperator.cpp" />
     <ClCompile Include="Operators\timeEndToStart.cpp" />
     <ClCompile Include="Operators\timeStartToStart.cpp" />
     <ClCompile Include="Operators\VersionOperator.cpp" />
     <ClCompile Include="InputSource\PrePostInputReader.cpp" />
     <ClCompile Include="InputSource\StandardInputSource.cpp" />
+    <ClCompile Include="OutputHandlers\MemoryOutputHandler.cpp" />
+    <ClCompile Include="Utils\BlockingTaskQueue.cpp" />
     <ClCompile Include="Utils\ConcurrentQueue.cpp" />
     <ClCompile Include="Utils\Initialization.cpp" />
     <ClCompile Include="InputSource\FileInputReader.cpp" />
@@ -230,6 +234,10 @@
     <ClInclude Include="CommandLineHandlers\SingleCommandLineHandler.h" />
     <ClInclude Include="CommandLineHandlers\TwoStringCommandLineHandler.h" />
     <ClInclude Include="InputSource\FileInputReader.h" />
+    <ClInclude Include="Operators\ParallelOperator.h" />
+    <ClInclude Include="Operators\RegexOperator.h" />
+    <ClInclude Include="OutputHandlers\MemoryOutputHandler.h" />
+    <ClInclude Include="Utils\BlockingTaskQueue.h" />
     <ClInclude Include="Utils\Globals.h" />
     <ClInclude Include="Utils\Initialization.h" />
     <ClInclude Include="InputSource\InputFileOperator.h" />

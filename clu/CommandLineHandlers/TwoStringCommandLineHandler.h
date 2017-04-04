@@ -27,7 +27,7 @@ public:
 		return true;
 	}
 
-	virtual clu::InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual clu::InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* ret_value = NULL;
 		if (vm.count(m_optionName1.c_str()) != 0 &&

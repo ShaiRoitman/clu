@@ -5,7 +5,7 @@
 
 USING_NAMESPACE(std);
 
-const char* g_version = "5.2.0";
+const char* g_version = "5.3.0";
 const char* g_app_name = "Command Line Utility";
 const char* g_developer_name = "Shai Roitman";
 

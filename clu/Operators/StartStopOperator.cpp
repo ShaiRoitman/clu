@@ -74,7 +74,7 @@ class StartStop_CommandLine : public InputFileOperator_CommandLine
 		return true;
 	}
 
-	virtual InputFileOperator* GetOperator(boost::program_options::variables_map &vm)
+	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* ret_value = NULL;
 		if (vm.count("start") || vm.count("stop"))

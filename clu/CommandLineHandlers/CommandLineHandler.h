@@ -26,7 +26,7 @@ protected:
 	const char** m_argv;
 	std::list<InputFileOperator_CommandLine*> m_handlers;
 	std::shared_ptr<boost::program_options::options_description> desc;
-private:
+public:
 	CommandLineHandler();
 	static CommandLineHandler singleton;
 

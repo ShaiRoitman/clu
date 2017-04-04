@@ -40,9 +40,6 @@
     <Filter Include="Source Files\Utils">
       <UniqueIdentifier>{63548eb0-4097-46c8-b369-31e34ba9ce41}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\OutputHandlers">
-      <UniqueIdentifier>{b89a728d-8e4d-459f-9f31-a3ae2a6c522a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Utils">
       <UniqueIdentifier>{d37506bb-457e-4d9d-87c8-2169c8c51001}</UniqueIdentifier>
     </Filter>
@@ -63,6 +60,9 @@
     </Filter>
     <Filter Include="Source Files\Operators\StringOperators">
       <UniqueIdentifier>{da18eb85-4b51-4af0-a684-aeee9694b329}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Operators\SystemOperators\OutputHandlers">
+      <UniqueIdentifier>{b89a728d-8e4d-459f-9f31-a3ae2a6c522a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -241,7 +241,7 @@
       <Filter>Source Files\Operators\SystemOperators</Filter>
     </ClCompile>
     <ClCompile Include="Operators\FileOutputHandler.cpp">
-      <Filter>Source Files\OutputHandlers</Filter>
+      <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
     </ClCompile>
     <ClCompile Include="InputSource\InputSource.cpp">
       <Filter>Source Files\InputSource</Filter>
@@ -250,13 +250,13 @@
       <Filter>Source Files\InputSource</Filter>
     </ClCompile>
     <ClCompile Include="OutputHandlers\OutputHandler.cpp">
-      <Filter>Source Files\OutputHandlers</Filter>
+      <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
     </ClCompile>
     <ClCompile Include="OutputHandlers\BufferedOutputHandler.cpp">
-      <Filter>Source Files\OutputHandlers</Filter>
+      <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
     </ClCompile>
     <ClCompile Include="OutputHandlers\StandardOutputHandler.cpp">
-      <Filter>Source Files\OutputHandlers</Filter>
+      <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
     </ClCompile>
     <ClCompile Include="Utils\ConcurrentQueue.cpp">
       <Filter>Source Files\Utils</Filter>
@@ -296,6 +296,18 @@
     </ClCompile>
     <ClCompile Include="Utils\Initialization.cpp">
       <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputHandlers\MemoryOutputHandler.cpp">
+      <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\TestOperator.cpp">
+      <Filter>Source Files\Operators\FullFileOperators</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\BlockingTaskQueue.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators\ParallelOperator.cpp">
+      <Filter>Source Files\Operators\Platform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +385,18 @@
     </ClInclude>
     <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h">
       <Filter>Header Files\InputFileOperator_CommandLine</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputHandlers\MemoryOutputHandler.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\RegexOperator.h">
+      <Filter>Header Files\Operators</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\BlockingTaskQueue.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Operators\ParallelOperator.h">
+      <Filter>Header Files\Platform</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

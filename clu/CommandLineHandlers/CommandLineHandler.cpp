@@ -8,6 +8,8 @@
 #include "Operators\TeeOperator.h"
 #include "PrePostInputSource.h"
 #include "StandardInputSource.h"
+#include "Operators\ParallelOperator.h"
+#include <boost/regex.hpp>
 
 BEGIN_NAMESPACE(clu)
 USING_NAMESPACE(std)
@@ -42,7 +44,8 @@ clu::InputFileOperator_CommandLine* CommandLineHandler::AddCommandLineHandler(cl
 
 bool CommandLineHandler::addCommandLineOptions(boost::program_options::options_description& desc)
 {
-	try {
+	try
+	{
 		std::list<InputFileOperator_CommandLine*>::iterator iter;
 		for (iter = m_handlers.begin();
 		iter != m_handlers.end();
@@ -106,11 +109,45 @@ bool CommandLineHandler::GetOperatorAndSource(InputFileOperator*& listener, Inpu
 	desc->add_options()
 		("inplace", boost::program_options::value<string>(), "Works on a file inplace");
 
+	desc->add_options()
+		("parallel", boost::program_options::value<string>(), "Parallel, ChunkSize, NumberOfThreads, QueueSize");
+
 	success_code = parseCommandLineOptions(vm);
 	if (success_code == false)
 		return NULL;
 
-	listener = findCorrectHandler(vm);
+	if (vm.count("parallel"))
+	{
+		boost::regex pOptions ("(?<ChunkSize>[0-9]+),(?<Threads>[0-9]+),(?<QueueSize>[0-9]+)");
+		const string& pParams = vm["parallel"].as<string>();
+		int chunkSize = 50000;
+		int numberOfThreads = 4;
+		int queueSize = 3;
+
+		boost::match_results<string::const_iterator> matches;
+		if (boost::regex_match(pParams, matches, pOptions))
+		{
+			chunkSize = atoi(matches["ChunkSize"].str().c_str());
+			numberOfThreads = atoi(matches["Threads"].str().c_str());
+			queueSize = atoi(matches["QueueSize"].str().c_str());
+		}
+
+		boost::program_options::variables_map* passedVM = new boost::program_options::variables_map(vm);
+		listener = CreateParallelOperator(
+			chunkSize, 
+			numberOfThreads, 
+			queueSize, 
+			[=]() 
+		{
+			boost::program_options::variables_map* passVMCopy = passedVM;
+			return this->findCorrectHandler(*passVMCopy);
+		});
+	}
+	else
+	{
+		listener = findCorrectHandler(vm);
+	}
+
 
 	if (vm.count("output") && listener != NULL) {
 		const string& output_filename = vm["output"].as<string>();
