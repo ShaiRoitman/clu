@@ -154,7 +154,6 @@
     <ClCompile Include="Operators\MeasureTimeOperator.cpp" />
     <ClCompile Include="Operators\ParallelOperator.cpp" />
     <ClCompile Include="Operators\TeeOperator.cpp" />
-    <ClCompile Include="Operators\TestOperator.cpp" />
     <ClCompile Include="Operators\timeEndToStart.cpp" />
     <ClCompile Include="Operators\timeStartToStart.cpp" />
     <ClCompile Include="Operators\VersionOperator.cpp" />
