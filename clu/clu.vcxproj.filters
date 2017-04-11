@@ -300,9 +300,6 @@
     <ClCompile Include="OutputHandlers\MemoryOutputHandler.cpp">
       <Filter>Source Files\Operators\SystemOperators\OutputHandlers</Filter>
     </ClCompile>
-    <ClCompile Include="Operators\TestOperator.cpp">
-      <Filter>Source Files\Operators\FullFileOperators</Filter>
-    </ClCompile>
     <ClCompile Include="Utils\BlockingTaskQueue.cpp">
       <Filter>Source Files\Utils</Filter>
     </ClCompile>

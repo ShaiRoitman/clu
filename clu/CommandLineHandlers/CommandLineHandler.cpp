@@ -132,6 +132,9 @@ bool CommandLineHandler::GetOperatorAndSource(InputFileOperator*& listener, Inpu
 			queueSize = atoi(matches["QueueSize"].str().c_str());
 		}
 
+#ifdef DEBUG_OUTPUT
+		printf("Parallel Options ChunkSize %d Threads %d QueueSize %d\n", chunkSize, numberOfThreads, queueSize);
+#endif
 		boost::program_options::variables_map* passedVM = new boost::program_options::variables_map(vm);
 		listener = CreateParallelOperator(
 			chunkSize, 
