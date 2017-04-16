@@ -2,6 +2,7 @@
 #include <boost/tokenizer.hpp>
 #include <cstdlib>
 #include "Globals.h"
+#include <boost/lexical_cast.hpp>
 
 USING_NAMESPACE(std);
 
@@ -12,13 +13,7 @@ const char* g_developer_name = "Shai Roitman";
 
 std::string StringValue(double i)
 {
-	char buffer[100] = { 0 };
-#ifdef _WIN32
-	sprintf_s(buffer, 100, "%g", i);
-#else
-	sprintf(buffer, "%g", i);
-#endif
-	return string(buffer);
+	return boost::lexical_cast<string>(i);
 }
 
 void ExtractTokens(string input, vector<string>& ret_value, const char* delim)

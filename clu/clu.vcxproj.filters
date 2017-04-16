@@ -380,9 +380,6 @@
     <ClInclude Include="Utils\Utils.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h">
-      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
-    </ClInclude>
     <ClInclude Include="OutputHandlers\MemoryOutputHandler.h">
       <Filter>Header Files\Utils</Filter>
     </ClInclude>
@@ -394,6 +391,9 @@
     </ClInclude>
     <ClInclude Include="Operators\ParallelOperator.h">
       <Filter>Header Files\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandLineHandlers\InputFileOperatorCommandLine.h">
+      <Filter>Header Files\InputFileOperator_CommandLine</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
 #include "InputFileOperator.h"
+#include "CommandLineHandlers\CommandLineHandler.h"
 #include "CommandLineHandlers\TwoStringCommandLineHandler.h"
 #include "OutputHandlers\FileOutputHandler.h"
 #include <boost/regex.hpp>
@@ -37,4 +38,4 @@ public:
 	map<string, FileOutputHandler*> outputHandlers;
 };
 
-//	cmd_handler.AddCommandLineHandler(new TwoStringCommandLineHandler<SplitFilesOperator>("splitfilesRegex", "splitfilesPrefix", "regex to extract suffix", "Split the input into multiple files with filesPrefix"));
+//clu::CommandLineHandler::GetInstance().AddCommandLineHandler(new TwoStringCommandLineHandler<SplitFilesOperator>("splitfilesRegex", "splitfilesPrefix", "regex to extract suffix", "Split the input into multiple files with filesPrefix"));

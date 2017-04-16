@@ -229,6 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommandLineHandlers\CommandLineHandler.h" />
+    <ClInclude Include="CommandLineHandlers\InputFileOperatorCommandLine.h" />
     <ClInclude Include="CommandLineHandlers\PredicateCommandLineHandler.h" />
     <ClInclude Include="CommandLineHandlers\SingleCommandLineHandler.h" />
     <ClInclude Include="CommandLineHandlers\TwoStringCommandLineHandler.h" />
@@ -240,7 +241,6 @@
     <ClInclude Include="Utils\Globals.h" />
     <ClInclude Include="Utils\Initialization.h" />
     <ClInclude Include="InputSource\InputFileOperator.h" />
-    <ClInclude Include="CommandLineHandlersInputFileOperatorCommandLine.h" />
     <ClInclude Include="InputSource\InputSource.h" />
     <ClInclude Include="InputSource\MultipleInputSource.h" />
     <ClInclude Include="Operators\AggregateOperator.h" />
