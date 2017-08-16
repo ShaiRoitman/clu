@@ -20,4 +20,4 @@ protected:
 	string m_replaceString;
 };
 
-REGISTER_SINGLE_STRING("bucket", ReplaceQuotesOperator)->SetHelp("Bucket values by there value, delimited by ,");
+REGISTER_SINGLE_STRING("replaceQuotes", ReplaceQuotesOperator)->SetHelp("Replace quotes by the string");
