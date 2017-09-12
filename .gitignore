@@ -1,2 +1,11 @@
 clu/x64/
 clu/CMakeFiles/
+clu/.vs/
+clu/clu.dir/
+clu/Debug/
+clu/Release/clu.exe
+*.vcxproj
+*.filters
+clu/cmake_install.cmake
+clu/CMakeCache.txt
+*.sln
