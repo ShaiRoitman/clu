@@ -1,14 +1,14 @@
 #include "CommandLineHandler.h"
 #include <memory>
 #include "InputFileOperator.h"
-#include "OutputHandlers\FileOutputHandler.h"
-#include "OutputHandlers\BufferedOutputHandler.h"
+#include "OutputHandlers/FileOutputHandler.h"
+#include "OutputHandlers/BufferedOutputHandler.h"
 #include "FileInputReader.h"
 #include "Globals.h"
-#include "Operators\TeeOperator.h"
+#include "Operators/TeeOperator.h"
 #include "PrePostInputSource.h"
 #include "StandardInputSource.h"
-#include "Operators\ParallelOperator.h"
+#include "Operators/ParallelOperator.h"
 #include <boost/regex.hpp>
 
 BEGIN_NAMESPACE(clu)

@@ -1,6 +1,6 @@
 #include "Utils.h"
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\SingleCommandLineHandler.h"
+#include "CommandLineHandlers/SingleCommandLineHandler.h"
 #include <boost/algorithm/string/trim.hpp>
 
 USING_NAMESPACE(std);

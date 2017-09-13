@@ -1,5 +1,5 @@
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\CommandLineHandler.h"
+#include "CommandLineHandlers/CommandLineHandler.h"
 
 #include <boost/algorithm/string/trim.hpp>
 #include <boost/program_options.hpp>

@@ -1,5 +1,5 @@
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\TwoStringCommandLineHandler.h"
+#include "CommandLineHandlers/TwoStringCommandLineHandler.h"
 #include <boost/regex.hpp>
 
 USING_NAMESPACE(std);

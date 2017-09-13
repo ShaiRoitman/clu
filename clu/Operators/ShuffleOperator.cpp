@@ -1,5 +1,5 @@
 #include "FullFileOperator.h"
-#include "CommandLineHandlers\PredicateCommandLineHandler.h"
+#include "CommandLineHandlers/PredicateCommandLineHandler.h"
 
 #include <algorithm>
 

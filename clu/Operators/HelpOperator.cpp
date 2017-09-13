@@ -1,5 +1,5 @@
 #include "AggregateOperator.h"
-#include "CommandLineHandlers\PredicateCommandLineHandler.h"
+#include "CommandLineHandlers/PredicateCommandLineHandler.h"
 #include "Globals.h"
 
 USING_NAMESPACE(std);

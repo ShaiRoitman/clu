@@ -1,5 +1,5 @@
 #include "AggregateOperator.h"
-#include "CommandLineHandlers\SingleCommandLineHandler.h"
+#include "CommandLineHandlers/SingleCommandLineHandler.h"
 #include <ctime>
 #include <chrono>
 

@@ -4,7 +4,7 @@
 #include "MemoryOutputHandler.h"
 #include <queue>
 #include <mutex>
-#include "CommandLineHandlers\SingleCommandLineHandler.h"
+#include "CommandLineHandlers/SingleCommandLineHandler.h"
 #include "BlockingTaskQueue.h"
 
 USING_NAMESPACE(std);

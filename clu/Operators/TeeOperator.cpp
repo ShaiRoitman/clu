@@ -1,5 +1,5 @@
 #include "TeeOperator.h"
-#include "OutputHandlers\FileOutputHandler.h"
+#include "OutputHandlers/FileOutputHandler.h"
 
 USING_NAMESPACE(clu)
 USING_NAMESPACE(std)

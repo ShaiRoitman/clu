@@ -1,5 +1,5 @@
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\CommandLineHandler.h"
+#include "CommandLineHandlers/CommandLineHandler.h"
 
 #include <boost/tokenizer.hpp>
 #include <boost/regex.hpp>

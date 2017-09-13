@@ -2,7 +2,7 @@
 
 #include "Utils.h"
 #include "InputFileOperatorCommandLine.h"
-#include "CommandLineHandlers\CommandLineHandler.h"
+#include "CommandLineHandlers/CommandLineHandler.h"
 
 #include <string>
 

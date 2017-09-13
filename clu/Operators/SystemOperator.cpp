@@ -1,5 +1,5 @@
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\PredicateCommandLineHandler.h"
+#include "CommandLineHandlers/PredicateCommandLineHandler.h"
 #include <boost/algorithm/string/trim.hpp>
 
 USING_NAMESPACE(std);

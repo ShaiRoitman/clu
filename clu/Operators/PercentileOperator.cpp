@@ -1,5 +1,5 @@
 #include "FullFileOperator.h"
-#include "CommandLineHandlers\SingleCommandLineHandler.h"
+#include "CommandLineHandlers/SingleCommandLineHandler.h"
 
 #include <vector>
 

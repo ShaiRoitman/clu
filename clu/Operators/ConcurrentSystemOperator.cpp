@@ -1,10 +1,10 @@
 #include "Utils.h"
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\SingleCommandLineHandler.h"
+#include "CommandLineHandlers/SingleCommandLineHandler.h"
 #include <boost/algorithm/string/trim.hpp>
 
-#include "Utils\Task.h"
-#include "Utils\ProcessingQueue.h"
+#include "Utils/Task.h"
+#include "Utils/ProcessingQueue.h"
 
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);

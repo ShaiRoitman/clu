@@ -1,6 +1,6 @@
 #include "Utils.h"
 #include "InputFileOperator.h"
-#include "CommandLineHandlers\PredicateCommandLineHandler.h"
+#include "CommandLineHandlers/PredicateCommandLineHandler.h"
 #include <string>
 #include <map>
 

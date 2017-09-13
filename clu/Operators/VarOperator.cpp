@@ -1,5 +1,5 @@
 #include "VarOperator.h"
-#include "CommandLineHandlers\PredicateCommandLineHandler.h"
+#include "CommandLineHandlers/PredicateCommandLineHandler.h"
 
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
