@@ -5,6 +5,8 @@
 #include "InputFileOperatorCommandLine.h"
 #include <boost/program_options.hpp>
 
+BEGIN_NAMESPACE(clu)
+
 template <typename T>
 class TwoStringCommandLineHandler : public InputFileOperator_CommandLine
 {
@@ -20,9 +22,9 @@ public:
 	virtual bool AddProgramOptions(boost::program_options::options_description& desc)
 	{
 		desc.add_options()
-			(m_optionName1.c_str(), boost::program_options::value<string>(), m_firsthelp.c_str());
+		  (m_optionName1.c_str(), boost::program_options::value<std::string>(), m_firsthelp.c_str());
 		desc.add_options()
-			(m_optionName2.c_str(), boost::program_options::value<string>(), m_secondhelp.c_str());
+		  (m_optionName2.c_str(), boost::program_options::value<std::string>(), m_secondhelp.c_str());
 
 		return true;
 	}
@@ -33,8 +35,8 @@ public:
 		if (vm.count(m_optionName1.c_str()) != 0 &&
 			vm.count(m_optionName2.c_str()) != 0)
 		{
-			const std::string& arg1 = vm[m_optionName1.c_str()].as<string>();
-			const std::string& arg2 = vm[m_optionName2.c_str()].as<string>();
+		  const std::string& arg1 = vm[m_optionName1.c_str()].as<std::string>();
+		  const std::string& arg2 = vm[m_optionName2.c_str()].as<std::string>();
 			ret_value = new T(arg1, arg2);
 		}
 		return ret_value;
@@ -45,3 +47,5 @@ public:
 	std::string m_firsthelp;
 	std::string m_secondhelp;
 };
+
+END_NAMESPACE(clu)

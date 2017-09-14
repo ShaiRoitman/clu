@@ -2,6 +2,7 @@
 
 #include "Utils.h"
 #include <memory>
+#include <iostream>
 #include "InputFileOperator.h"
 #include "InputSource.h"
 #include "InputFileOperatorCommandLine.h"

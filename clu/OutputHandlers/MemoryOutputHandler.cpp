@@ -1,5 +1,3 @@
-#pragma once
-
 #include "MemoryOutputHandler.h"
 #include <boost/lexical_cast.hpp>
 #include <iomanip>
@@ -15,7 +13,7 @@ bool MemoryOutputHandler::Output(const std::string& str)
 }
 bool MemoryOutputHandler::OutputInteger(int value)
 {
-	std::string& valueStr = boost::lexical_cast<std::string>(value);
+	const std::string& valueStr = boost::lexical_cast<std::string>(value);
 	m_Lines.push_back(valueStr);
 	return true;
 }
@@ -24,13 +22,13 @@ bool MemoryOutputHandler::OutputDoubleNoLineFeed(double value)
 	std::ostringstream ss;
 	ss << std::fixed << std::setprecision(20);
 	ss << value;
-	std::string& valueStr = ss.str();
+	const std::string& valueStr = ss.str();
 	m_Lines.push_back(valueStr);
 	return true;
 }
 bool MemoryOutputHandler::OutputLong(long value)
 {
-	std::string& valueStr = boost::lexical_cast<std::string>(value);
+	const std::string& valueStr = boost::lexical_cast<std::string>(value);
 	m_Lines.push_back(valueStr);
 	return true;
 }
