@@ -9,3 +9,4 @@ clu/Release/clu.exe
 clu/cmake_install.cmake
 clu/CMakeCache.txt
 *.sln
+/.project
