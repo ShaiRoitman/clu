@@ -1,9 +1,20 @@
-cmake_minimum_required (VERSION 2.8.11)
+cmake_minimum_required (VERSION 3.8.2)
 project (CommandLineUtility CXX)
 
-set (BOOST_BASE_DIR "/home/master/boost/boost_1_65_1")
+if (IS_DIRECTORY "/home/master/boost/boost_1_65_1")
+	set (BOOST_BASE_DIR "/home/master/boost/boost_1_65_1")
+elseif (IS_DIRECTORY "c:/git/boost_1_65_1")
+	set (BOOST_BASE_DIR "c:/git/boost_1_65_1")
+else()
+	message("Build boost")
+	message(".\b2 variant=debug address-model=64 link=static threading=multi runtime-link=shared --with-program_options --with-regex --with-system --with-thread --with-date_time")
+	message(".\b2 variant=release address-model=64 link=static threading=multi runtime-link=shared --with-program_options --with-regex --with-system --with-thread --with-date_time")
+	message(FATAL_ERROR "Boost not found")
+endif()
+
 set (BOOST_INCLUDE ${BOOST_BASE_DIR})
 set (BOOST_LIBPATH "${BOOST_BASE_DIR}/stage/lib")
+
 set (BOOST_LIBS ${BOOST_LIBS} "libboost_program_options-gcc54-mt-1_65_1.so")
 set (BOOST_LIBS ${BOOST_LIBS} "libboost_regex-gcc54-mt-1_65_1.so")
 set (BOOST_LIBS ${BOOST_LIBS} "libboost_system-gcc54-mt-1_65_1.so")
@@ -29,7 +40,6 @@ file(GLOB_RECURSE cmakefile "CMakeLists.txt")
 include_directories(${BOOST_INCLUDE})
 link_directories(${BOOST_LIBPATH})
 
-
 add_executable (clu ${sources} ${headers} ${external} ${cmakefile})
 set_target_properties(clu PROPERTIES LINKER_LANGUAGE CXX)
 
@@ -40,7 +50,6 @@ endif(UNIX)
 source_group(TREE "." PREFIX "Sources" FILES ${sources})
 source_group(TREE "." PREFIX "Headers" FILES ${headers})
 source_group("BuildSystem" FILES ${cmakefile})
-#source_group("Headers" ${headers})
-#source_group("External" ${external})
+source_group("External" FILES ${external})
 
 set_property(TARGET clu PROPERTY CXX_STANDARD 11)
