@@ -1,25 +1,7 @@
-cmake_minimum_required (VERSION 3.8.2)
+cmake_minimum_required (VERSION 3.4.0)
 project (CommandLineUtility CXX)
 
-if (IS_DIRECTORY "/home/master/boost/boost_1_65_1")
-	set (BOOST_BASE_DIR "/home/master/boost/boost_1_65_1")
-elseif (IS_DIRECTORY "c:/git/boost_1_65_1")
-	set (BOOST_BASE_DIR "c:/git/boost_1_65_1")
-elseif (IS_DIRECTORY "t:/GitRepos/boost_1_65_1")
-	set (BOOST_BASE_DIR "t:/GitRepos/boost_1_65_1")
-else()
-	message("Build boost")
-	message(".\b2 variant=debug address-model=64 link=static threading=multi runtime-link=shared --with-program_options --with-regex --with-system --with-thread --with-date_time")
-	message(".\b2 variant=release address-model=64 link=static threading=multi runtime-link=shared --with-program_options --with-regex --with-system --with-thread --with-date_time")
-	message(FATAL_ERROR "Boost not found")
-endif()
-
-set (BOOST_INCLUDE ${BOOST_BASE_DIR})
-set (BOOST_LIBPATH "${BOOST_BASE_DIR}/stage/lib")
-
-set (BOOST_LIBS ${BOOST_LIBS} "libboost_program_options-gcc54-mt-1_65_1.so")
-set (BOOST_LIBS ${BOOST_LIBS} "libboost_regex-gcc54-mt-1_65_1.so")
-set (BOOST_LIBS ${BOOST_LIBS} "libboost_system-gcc54-mt-1_65_1.so")
+find_package(Boost COMPONENTS program_options regex system)
 
 set (AUX_LIBS "pthread")
 
@@ -39,18 +21,23 @@ include_directories("OutputHandlers")
 file(GLOB_RECURSE headers	"*.h")
 file(GLOB_RECURSE cmakefile "CMakeLists.txt")
 
-include_directories(${BOOST_INCLUDE})
-link_directories(${BOOST_LIBPATH})
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
 
 add_executable (clu ${sources} ${headers} ${external} ${cmakefile})
 set_target_properties(clu PROPERTIES LINKER_LANGUAGE CXX)
 
 if (UNIX)
-   target_link_libraries(clu ${BOOST_LIBS}   ${AUX_LIBS})
+   target_link_libraries(clu ${Boost_LIBRARIES}   ${AUX_LIBS})
 endif(UNIX)
 
-source_group(TREE "." PREFIX "Sources" FILES ${sources})
-source_group(TREE "." PREFIX "Headers" FILES ${headers})
+if(${CMAKE_VERSION} VERSION_LESS "3.8.0") 
+    message("Please consider to switch to CMake 3.8.0")
+else()
+    source_group(TREE "." PREFIX "Sources" FILES ${sources})
+    source_group(TREE "." PREFIX "Headers" FILES ${headers})
+endif()
+
 source_group("BuildSystem" FILES ${cmakefile})
 source_group("External" FILES ${external})
 
