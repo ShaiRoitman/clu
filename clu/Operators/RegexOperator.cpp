@@ -18,7 +18,7 @@ bool RegexOperator::OnLineRead(string& line)
 	{
 		for (size_t i = 1; i < matches.size(); i++)
 		{
-			m_OutputHandler->Output(matches[i]);
+			m_OutputHandler->Output(matches[(int)i]);
 			if (i != (matches.size() - 1))
 			{
 				m_OutputHandler->Output(this->delimitString);
