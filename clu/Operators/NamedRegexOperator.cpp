@@ -9,7 +9,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class NamedRegexOperator : public InputFileOperator {
+class NamedRegexOperator : public InputFileOperator
+{
 public:
 	NamedRegexOperator(const string& regex, const string& format) : m_format(format)
 	{

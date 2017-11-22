@@ -20,8 +20,8 @@ file(GLOB_RECURSE is_sources			"InputSource/*.cpp")
 file(GLOB_RECURSE op_sources			"Operators/*.cpp")
 file(GLOB_RECURSE output_sources		"OutputHandlers/*.cpp")
 file(GLOB_RECURSE utils_sources			"Utils/*.cpp")
-file(GLOB_RECURSE headers	"*.h")
-file(GLOB_RECURSE cmakefile "CMakeLists.txt")
+file(GLOB_RECURSE headers				"*.h")
+file(GLOB_RECURSE cmakefile				"CMakeLists.txt" "ReleaseNotes.txt")
 
 set (sources ${clh_sources} ${is_sources} ${op_sources} ${output_sources} ${utils_sources} "CommandLineUtility.cpp")
 

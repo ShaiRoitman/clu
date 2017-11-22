@@ -4,7 +4,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class ReplaceQuotesOperator : public InputFileOperator {
+class ReplaceQuotesOperator : public InputFileOperator 
+{
 public:
 	ReplaceQuotesOperator(string replace) :
 		m_replaceString(replace) {}

@@ -1,25 +1,28 @@
-﻿Version 5.4          21/11/2017
--------------------------------
+﻿Version 5.4.1														21/11/2017
+-------------------------------------------------------------------------------
+* minor refactoring
+
+Version 5.4															21/11/2017
+-------------------------------------------------------------------------------
 + tohex
 
-
-Version 5.3.1          04/04/2017
+Version 5.3.1														04/04/2017
 -------------------------------------------------------------------------------
 * replaceQuotes					- Fix replaceQuotes
 
-Version 5.3          04/04/2017
+Version 5.3															04/04/2017
 -------------------------------------------------------------------------------
 + parallel						- Enable Parallel operations
 
-Version 5.2          15/01/2017
+Version 5.2															15/01/2017
 -------------------------------------------------------------------------------
 + timeEndToStart				- interval time between input
 + timeStartToStart				- interval time between start time
 
-Version 5.1          12/01/2017
+Version 5.1															12/01/2017
 -------------------------------------------------------------------------------
 Adding measureTime				- single string: arguments start,end,diff,pass
 
-Version 5.0          01/01/2017
+Version 5.0															01/01/2017
 -------------------------------------------------------------------------------
-Rewrite/Reorder for publishing the code
+Refactor for publishing the code

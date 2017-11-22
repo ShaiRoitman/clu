@@ -9,7 +9,8 @@ USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 namespace po = boost::program_options;
 
-class FilterOperator : public InputFileOperator {
+class FilterOperator : public InputFileOperator 
+{
 public:
 	FilterOperator(int argument_number) : m_argumentNumber(argument_number - 1)
 	{

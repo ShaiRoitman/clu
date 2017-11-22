@@ -5,7 +5,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class FormatStringOperator : public InputFileOperator {
+class FormatStringOperator : public InputFileOperator
+{
 public:
 	FormatStringOperator(string format) : m_format(format)
 	{

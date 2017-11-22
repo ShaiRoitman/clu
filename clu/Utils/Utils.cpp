@@ -1,15 +1,9 @@
 #include "Utils.h"
 #include <boost/tokenizer.hpp>
 #include <cstdlib>
-#include "Globals.h"
 #include <boost/lexical_cast.hpp>
 
 USING_NAMESPACE(std);
-
-const char* g_version = "5.4";
-const char* g_app_name = "Command Line Utility";
-const char* g_developer_name = "Shai Roitman";
-
 
 std::string StringValue(double i)
 {

@@ -1,7 +1,8 @@
 #include "AggregateOperator.h"
 #include "CommandLineHandlers/PredicateCommandLineHandler.h"
 
-class AvgOperator : public AggregateOperator {
+class AvgOperator : public AggregateOperator
+{
 public:
 	virtual bool OnStart()
 	{

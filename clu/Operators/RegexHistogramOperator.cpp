@@ -5,7 +5,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class RegexHistogramOperator : public InputFileOperator {
+class RegexHistogramOperator : public InputFileOperator
+{
 public:
 	RegexHistogramOperator(string regex) :
 		m_regex(regex) {}
@@ -38,7 +39,7 @@ public:
 	virtual void OnEnd()
 	{
 		for (map <string, pair<double, int> >::iterator iter = m_instanceCount.begin();
-		iter != m_instanceCount.end();
+			iter != m_instanceCount.end();
 			++iter)
 		{
 			const string& value = (*iter).first;

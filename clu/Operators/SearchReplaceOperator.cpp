@@ -9,7 +9,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class SearchAndReplace : public InputFileOperator {
+class SearchAndReplace : public InputFileOperator
+{
 public:
 	SearchAndReplace(const string& search, const string& replace) : m_search(search), m_replace(replace)
 	{

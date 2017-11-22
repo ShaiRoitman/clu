@@ -6,7 +6,8 @@
 USING_NAMESPACE(std);
 USING_NAMESPACE(clu);
 
-class FileMergerOperator : public InputFileOperator {
+class FileMergerOperator : public InputFileOperator
+{
 public:
 	FileMergerOperator(string filename) :
 		m_filename(filename) {}
