@@ -15,6 +15,18 @@ endif()
 set (Boost_DETAILED_FAILURE_MSG ON)
 find_package(Boost COMPONENTS program_options regex system)
 
+set(CompilerFlags
+        CMAKE_CXX_FLAGS
+        CMAKE_CXX_FLAGS_DEBUG
+        CMAKE_CXX_FLAGS_RELEASE
+        CMAKE_C_FLAGS
+        CMAKE_C_FLAGS_DEBUG
+        CMAKE_C_FLAGS_RELEASE
+        )
+foreach(CompilerFlag ${CompilerFlags})
+  string(REPLACE "/MD" "/MT" ${CompilerFlag} "${${CompilerFlag}}")
+endforeach()
+
 file(GLOB_RECURSE clh_sources			"CommandLineHandlers/*.cpp")
 file(GLOB_RECURSE is_sources			"InputSource/*.cpp")
 file(GLOB_RECURSE op_sources			"Operators/*.cpp")
