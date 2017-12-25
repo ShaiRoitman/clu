@@ -38,4 +38,4 @@ public:
 	map<string, FileOutputHandler*> outputHandlers;
 };
 
-//clu::CommandLineHandler::GetInstance().AddCommandLineHandler(new TwoStringCommandLineHandler<SplitFilesOperator>("splitfilesRegex", "splitfilesPrefix", "regex to extract suffix", "Split the input into multiple files with filesPrefix"));
+static auto nameRegisterVar = clu::CommandLineHandler::GetInstance().AddCommandLineHandler(new TwoStringCommandLineHandler<SplitFilesOperator>("splitfilesRegex", "splitfilesPrefix", "regex to extract suffix", "Split the input into multiple files with filesPrefix"));
