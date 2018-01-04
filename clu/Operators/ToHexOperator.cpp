@@ -15,8 +15,8 @@ public:
 	virtual bool OnNumberRead(double number)
 	{
 		char buffer[64] = { 0 };
-		long integerNumber = (long)number;
-		sprintf(buffer, "%x", integerNumber);
+		unsigned long integerNumber = (unsigned long)number;
+		sprintf(buffer, "%lx", integerNumber);
 		m_OutputHandler->OutputLineFeed(std::string(buffer));
 		return true;
 	}
