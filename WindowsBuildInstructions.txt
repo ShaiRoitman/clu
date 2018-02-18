@@ -1,0 +1,25 @@
+Windows Build Instructions
+--------------------------
+1. Get CMAKE
+   https://cmake.org/download/
+
+2. Download boost from http://www.boost.org/
+   https://dl.bintray.com/boostorg/release/1.65.1/source/boost_1_65_1.zip
+
+3. bootstrap.bat in VS Cmdline boost 
+
+4. .\b2 --build-type=complete --with-program_options --with-regex --with-system --with-thread --with-date_time address-model=64
+   If you want to build the complete boost 
+   .\b2 --build-type=complete address-model=64
+
+5. get clu code 
+   git clone https://github.com/ShaiRoitman/clu
+
+6 Fix clu\CMakeLists.txt to include boost : add 
+  set (BOOST_ROOT "C:/Work/boost_1_65_1")  
+
+6. "cmake ." in clu subdirectory
+
+7. open CommandLineUtility.sln and build in debug and release 64 bit 
+   or run cmd line ( VS Shell) (x64 Native Tools)
+   msbuild CommandLineUtility.sln /t:Build /p:Configuration=Release /p:Platform="x64"
