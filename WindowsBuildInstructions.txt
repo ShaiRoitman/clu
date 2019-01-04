@@ -18,7 +18,8 @@ Windows Build Instructions
 6 Fix clu\CMakeLists.txt to include boost : add 
   set (BOOST_ROOT "C:/Work/boost_1_65_1")  
 
-6. "cmake ." in clu subdirectory
+6. In clu subdirectory execute: 
+   cmake -G "Visual Studio 15 2017 Win64" .
 
 7. open CommandLineUtility.sln and build in debug and release 64 bit 
    or run cmd line ( VS Shell) (x64 Native Tools)

@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 3.4.0)
 project (CommandLineUtility CXX)
 
+set (BOOST_ROOT "C:/dev/boost_1_68_0")
+
 if(DEFINED ENV{CMAKE_SYSTEM_ROOTS})
 	include ($ENV{CMAKE_SYSTEM_ROOTS} OPTIONAL)
 	message ("Using $ENV{CMAKE_SYSTEM_ROOTS}")
