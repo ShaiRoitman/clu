@@ -1,5 +1,3 @@
-#pragma once
-
 #include "BufferedOutputHandler.h"
 
 BufferedOutputHandler::BufferedOutputHandler(const std::string& filename)
