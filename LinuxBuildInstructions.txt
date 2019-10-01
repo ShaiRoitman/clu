@@ -1,4 +1,6 @@
-in clu directory
+Linux Build Instructions
+------------------------
+In clu directory
 
 cmake -DCMAKE_BUILD_TYPE=Release
 make -j 6
