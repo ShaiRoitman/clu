@@ -1,0 +1,5 @@
+in clu directory
+
+cmake -DCMAKE_BUILD_TYPE=Release
+make -j 6
+
