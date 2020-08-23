@@ -1,0 +1,13 @@
+Linux Build Instructions
+------------------------
+In clu directory
+
+cmake -DCMAKE_BUILD_TYPE=Release
+make -j 6
+
+docker build -t clu_compile compile_clu
+docker run -it -v $PWD:/clu
+cd clu
+cmake -DCMAKE_BUILD_TYPE=Release
+make -j 6
+

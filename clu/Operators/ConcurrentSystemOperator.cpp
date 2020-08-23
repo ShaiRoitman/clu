@@ -19,7 +19,7 @@ public:
 
 	virtual void operator()()
 	{
-		system(this->m_cmd.c_str());
+		if(system(this->m_cmd.c_str())) {};
 	}
 
 private:

@@ -13,7 +13,7 @@ public:
 		boost::algorithm::trim(cmd);
 		if (!cmd.empty())
 		{
-			system(cmd.c_str());
+			if (system(cmd.c_str())) {};
 		}
 
 		return true;
