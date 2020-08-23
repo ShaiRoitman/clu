@@ -177,7 +177,8 @@ bool CommandLineHandler::GetOperatorAndSource(InputFileOperator*& listener, Inpu
 	{
 		const string& inplace_filename = vm["inplace"].as<string>();
 		source = new FileInputReader(inplace_filename);
-		listener->m_OutputHandler = new BufferedOutputHandler(inplace_filename);
+		if (listener != nullptr)
+			listener->m_OutputHandler = new BufferedOutputHandler(inplace_filename);
 	}
 	else
 	{

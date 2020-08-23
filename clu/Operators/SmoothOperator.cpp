@@ -9,7 +9,7 @@ USING_NAMESPACE(clu);
 class SmoothOperator : public NumberOperator
 {
 public:
-	SmoothOperator(int window_size) : m_size(window_size), m_data(NULL), m_curpos(0)
+	SmoothOperator(int window_size) : m_size(window_size), m_data(NULL), m_curpos(0), m_currsize(0)
 	{
 		m_data = new double[window_size];
 		for (int i = 0; i < window_size; i++) {

@@ -5,6 +5,7 @@
 class VarOperator : public AggregateOperator
 {
 public:
+	VarOperator() : m_count(0), m_sum(0), m_sqrsum(0) {}
 	virtual bool OnStart();
 	virtual bool OnNumberRead(double number);
 	virtual void OnEnd();

@@ -4,6 +4,7 @@
 class AvgOperator : public AggregateOperator
 {
 public:
+	AvgOperator() : m_count(0) {}
 	virtual bool OnStart()
 	{
 		m_value = 0;

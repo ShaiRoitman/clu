@@ -8,7 +8,7 @@ USING_NAMESPACE(clu);
 
 class MeasureTimeOperator : public InputFileOperator {
 public:
-	MeasureTimeOperator(string operators) : argument(operators)
+	MeasureTimeOperator(string operators) : argument(operators), start(0)
 	{
 		if (this->argument.find("pass") != string::npos)
 		{

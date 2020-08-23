@@ -12,7 +12,7 @@ namespace po = boost::program_options;
 class FilterOperator : public InputFileOperator 
 {
 public:
-	FilterOperator(int argument_number) : m_argumentNumber(argument_number - 1)
+	FilterOperator(size_t argument_number) : m_argumentNumber(argument_number - 1)
 	{
 		if (argument_number == 0)
 			m_fullline = true;
@@ -49,7 +49,7 @@ protected:
 class NumericFilter : public FilterOperator
 {
 public:
-	NumericFilter(int arg_num, double arg_value) : FilterOperator(arg_num), m_argValue(arg_value)
+	NumericFilter(size_t arg_num, double arg_value) : FilterOperator(arg_num), m_argValue(arg_value)
 	{
 	}
 
@@ -89,7 +89,7 @@ public:
 class ContainStringFilter : public FilterOperator
 {
 public:
-	ContainStringFilter(int arg_num, string value, bool match) : FilterOperator(arg_num), m_match(match)
+	ContainStringFilter(size_t arg_num, string value, bool match) : FilterOperator(arg_num), m_match(match)
 	{
 		m_search_regex = boost::regex(value.c_str());
 	}
