@@ -43,7 +43,7 @@ private:
 		m_Sections.push_back(sectionValue);
 	}
 
-	int m_Count;
+	size_t m_Count;
 	boost::regex m_StartRegex;
 	boost::regex m_EndRegex;
 	list<string> m_Sections;

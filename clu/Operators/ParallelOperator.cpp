@@ -1,5 +1,4 @@
 #include "InputFileOperator.h"
-#include "RegexOperator.h"
 #include "Task.h"
 #include "MemoryOutputHandler.h"
 #include <queue>
@@ -171,7 +170,6 @@ class ParallelOperator : public InputFileOperator
 public:
 	ParallelOperator(int countSize, int numberOfThreads, int queueSize, std::function<InputFileOperator*()> operatorFactory)
 	{
-		this->regex = regex;
 		this->countSize = countSize;
 		this->numberOfThreads = numberOfThreads;
 		this->maxQueueSize = queueSize;
@@ -227,7 +225,6 @@ private:
 	Container* currentContainer;
 	MergeContainer* mergeContainer;
 	BlockingTaskQueue* taskQueue;
-	string regex;
 	long lastId;
 	int countSize;
 	int numberOfThreads;
