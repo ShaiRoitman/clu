@@ -8,14 +8,12 @@ if(DEFINED ENV{CMAKE_SYSTEM_ROOTS})
 	message ("Using $ENV{CMAKE_SYSTEM_ROOTS}")
 endif()
 
-if (NOT UNIX)
 	set (Boost_USE_STATIC_RUNTIME OFF)
 	set (Boost_USE_STATIC_LIBS ON)
 	set (Boost_USE_MULTITHREADED ON)
-endif()
 
 set (Boost_DETAILED_FAILURE_MSG ON)
-find_package(Boost COMPONENTS program_options regex system)
+find_package(Boost COMPONENTS program_options regex system filesystem)
 
 set(CompilerFlags
         CMAKE_CXX_FLAGS
