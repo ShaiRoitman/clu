@@ -13,7 +13,7 @@ public:
 	{
 		m_regex = "(<?source>.*),(<?target>.*)";
 	}
-	bool SymLinkOperator::OnLineRead(string& line)
+	bool OnLineRead(string& line)
 	{
 		boost::filesystem::path source;
 		boost::filesystem::path target;
