@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.4.0)
 project (CommandLineUtility CXX)
 
-set (BOOST_ROOT "C:/dev/boost_1_70_0")
+set (BOOST_ROOT "C:/dev/boost_1_75_0")
 
 if(DEFINED ENV{CMAKE_SYSTEM_ROOTS})
 	include ($ENV{CMAKE_SYSTEM_ROOTS} OPTIONAL)
@@ -48,6 +48,10 @@ link_directories(${Boost_LIBRARY_DIRS})
 
 add_executable (clu ${sources} ${headers} ${external} ${cmakefile})
 set_target_properties(clu PROPERTIES LINKER_LANGUAGE CXX)
+
+IF(MSVC)
+    ADD_DEFINITIONS("/EHsc")
+ENDIF(MSVC)
 
 if (UNIX)
    set (AUX_LIBS "pthread")

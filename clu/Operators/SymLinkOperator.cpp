@@ -11,7 +11,7 @@ class SymLinkOperator : public clu::InputFileOperator {
 public:
 	SymLinkOperator()
 	{
-		m_regex = "(<?source>.*),(<?target>.*)";
+		m_regex = "(.*),(.*)";
 	}
 	bool OnLineRead(string& line)
 	{
@@ -21,8 +21,8 @@ public:
 		boost::match_results<string::const_iterator> matches;
 		if (boost::regex_match(line, matches, m_regex))
 		{
-			source = matches["source"].str();
-			target = matches["target"].str();
+			source = matches[1].str();
+			target = matches[2].str();
 			boost::filesystem::create_symlink(source, target);
 		}
 
