@@ -25,9 +25,9 @@ public:
 			target = matches[2].str();
 			boost::system::error_code ec;
 			boost::filesystem::create_symlink(source, target, ec);
-			if (ec.failed())
+			if (ec.value() != 0)
 			{
-				m_OutputHandler->Output(string("failed to create link source [") + source.string() + string("] target [") + target.string() + string("]") );
+				m_OutputHandler->Output(string("failed to create link source [") + source.string() + string("] target [") + target.string() + string("]\n") );
 			}
 		}
 
