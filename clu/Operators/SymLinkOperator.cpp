@@ -23,7 +23,12 @@ public:
 		{
 			source = matches[1].str();
 			target = matches[2].str();
-			boost::filesystem::create_symlink(source, target);
+			boost::system::error_code ec;
+			boost::filesystem::create_symlink(source, target, ec);
+			if (ec.failed())
+			{
+				m_OutputHandler->Output(string("failed to create link source [") + source.string() + string("] target [") + target.string() + string("]") );
+			}
 		}
 
 		return true;
