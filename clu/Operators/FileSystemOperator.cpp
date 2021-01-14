@@ -87,9 +87,8 @@ public:
 			}
 			else if (op == "abs")
 			{
-				boost::system::error_code ec;
 				boost::filesystem::path path = arg1;
-				boost::filesystem::path abs = boost::filesystem::absolute(path, ec);
+				boost::filesystem::path abs = boost::filesystem::absolute(path);
 				m_OutputHandler->OutputLineFeed(abs.string());
 			}
 		}
