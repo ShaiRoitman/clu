@@ -192,7 +192,7 @@ public:
 		return retValue;
 	}
 
-	virtual bool OnStart()
+	virtual bool OnStart() override
 	{
 		this->currentContainer = CreateNewContainer();
 		this->mergeContainer = new MergeContainer(this->m_OutputHandler);
@@ -201,7 +201,7 @@ public:
 		return true;
 	}
 
-	virtual bool OnLineRead(string& line)
+	virtual bool OnLineRead(string& line) override
 	{
 		this->currentContainer->data.push_back(line);
 		if (this->currentContainer->data.size() == this->countSize)

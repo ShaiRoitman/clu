@@ -95,7 +95,7 @@ bool CommandLineHandler::GetOperatorAndSource(InputFileOperator*& listener, Inpu
 	boost::program_options::variables_map vm;
 	bool success_code = addCommandLineOptions(*desc);
 	if (success_code == false)
-		return NULL;
+		return false;
 
 	desc->add_options()
 		("output,o", boost::program_options::value<string>(), "Output result to a file , prints to standard output the input");
@@ -114,7 +114,7 @@ bool CommandLineHandler::GetOperatorAndSource(InputFileOperator*& listener, Inpu
 
 	success_code = parseCommandLineOptions(vm);
 	if (success_code == false)
-		return NULL;
+		return false;
 
 	if (vm.count("parallel"))
 	{

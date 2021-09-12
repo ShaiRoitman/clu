@@ -27,7 +27,7 @@ public:
 	{
 		InputFileOperator* ret_value = NULL;
 		if (vm.count(m_optionName.c_str())) {
-			const Arg& arg = vm[m_optionName.c_str()].as<Arg>();
+			const Arg& arg = vm[m_optionName.c_str()].template as<Arg>();
 			ret_value = new T(arg);
 		}
 		return ret_value;

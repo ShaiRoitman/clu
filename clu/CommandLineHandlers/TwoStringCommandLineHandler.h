@@ -35,8 +35,8 @@ public:
 		if (vm.count(m_optionName1.c_str()) != 0 &&
 			vm.count(m_optionName2.c_str()) != 0)
 		{
-		  const std::string& arg1 = vm[m_optionName1.c_str()].as<std::string>();
-		  const std::string& arg2 = vm[m_optionName2.c_str()].as<std::string>();
+		  const std::string& arg1 = vm[m_optionName1.c_str()].template as<std::string>();
+		  const std::string& arg2 = vm[m_optionName2.c_str()].template as<std::string>();
 			ret_value = new T(arg1, arg2);
 		}
 		return ret_value;

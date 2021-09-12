@@ -23,7 +23,7 @@ public:
 	virtual InputFileOperator* GetOperator(const boost::program_options::variables_map &vm)
 	{
 		InputFileOperator* ret_value = NULL;
-		if (vm.count(m_optionName.c_str()) && vm[m_optionName.c_str()].as<bool>())
+		if (vm.count(m_optionName.c_str()) && vm[m_optionName.c_str()].template as<bool>())
 			ret_value = new T();
 
 		return ret_value;
